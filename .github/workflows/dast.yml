@@ -23,7 +23,7 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        run: npm install --ignore-scripts
+        run: npm install
 
       - name: Build application
         run: npm run build
@@ -31,7 +31,7 @@ jobs:
       - name: Start Juice-Shop
         run: |
           npm start &
-          sleep 60
+          sleep 90
 
       - name: Run ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.12.0
