@@ -22,11 +22,8 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install dependencies
+      - name: Install and build
         run: npm install
-
-      - name: Build application
-        run: npm run build
 
       - name: Start Juice-Shop
         run: |
